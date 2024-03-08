@@ -13,6 +13,7 @@ export default function RootLayout({children}) {
         <html lang="en">
         <head>
             <link rel="icon" href="/favicon.ico" sizes="any"/>
+            <title></title>
         </head>
 
         <body className={`bg-gradient-to-r from-black to-gray-900`}>

@@ -2,7 +2,7 @@
 
 import {useEffect} from "react";
 
-export const MainContentSection = (props: {isBorder:boolean, side:string, mainContent:string}) => {
+export const MainContentSectionSecondary = (props: {isBorder:boolean, side:string, mainContent:string}) => {
     const border: string = 'border-[4px] border-[solid] border-[white]';
     const textColor: string = 'text-[whitesmoke]';
     const activeBorder = props.isBorder ? `${border} border-[4px] border-[solid] border-[white]` : ' ';
@@ -16,8 +16,8 @@ export const MainContentSection = (props: {isBorder:boolean, side:string, mainCo
                         {props.side}
                     </p>
                 </div>
-                <div className={`flex flex-[1.5]`}>
-                    <p className={`${textColor} text-6xl `}>
+                <div className={`flex flex-[1.5] justify-end mr-[200px] text-2xl`}>
+                    <p className={`${textColor}`}>
                         {props.mainContent}
                     </p>
                 </div>
