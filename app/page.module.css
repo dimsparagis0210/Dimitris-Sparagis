@@ -1,8 +1,7 @@
 .cursor{
-    position: fixed;
+    position: absolute;
     border-radius:50%;
     background: white;
     width: 30px;
     aspect-ratio: 1;
-    display: block;
 }

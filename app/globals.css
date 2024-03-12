@@ -2,13 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/*Base Styles*/
+
 * {
     box-sizing: border-box;
     margin: 0;
-    padding:0;
-    cursor:none;
+    padding: 0;
+    cursor: none;
 }
 
-.test{
+/*Variables*/
+:root {
+    --text-colorPrimary: whitesmoke;
+}
+
+.textColorPrimary {
+    color: var(--text-colorPrimary);
+}
+
+
+.test {
     @apply flex flex-grow h-[100%] w-[100%];
 }
