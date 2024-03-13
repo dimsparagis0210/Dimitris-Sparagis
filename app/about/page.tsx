@@ -14,7 +14,7 @@ export default function AboutPage() {
     const [navClicked, setNavClicked] = useState(true);
     const navItemStyle = `textColorPrimary w-[100%] h-[100%] bg-white rounded-full`;
     return (
-        <div className={`${myFont.className} min-h-screen flex flex-col`}>
+        <div className={`${myFont.className} flex flex-col min-h-screen`}>
             <Cursor/>
             <header className={`flex justify-between p-10 border`}>
                 <div className={`flex flex-col items-center border`}>
@@ -93,7 +93,7 @@ export default function AboutPage() {
                     </div>
                 </section>
             </main>
-            <footer className={`flex relative h-auto border border-red-500 bottom-0`}>
+            <footer className={`flex relative border border-red-500 bottom-0`}>
                 <p className={`textColorPrimary text-3xl`}>
                     Footer
                 </p>
