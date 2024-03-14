@@ -2,7 +2,7 @@ import {ArrowUpward, ArrowUpwardRounded} from "@mui/icons-material";
 import {motion} from "framer-motion";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
-export const Header = () => {
+export const Header = (props:{size:number}) => {
     const navItemStyle = `textColorPrimary w-[100%] h-[100%] bg-white rounded-full`;
 
     //Handlers
@@ -10,7 +10,7 @@ export const Header = () => {
         window.scrollTo({top: 0, behavior: "smooth"});
     }
     return (
-        <header className={`flex items-center justify-between border`}>
+        <header className={`flex items-center flex-[${props.size}] justify-between border`}>
             <div className={`flex flex-col items-center border`}>
                 <motion.button
                     animate={{scale: [1, 1.3, 1]}}

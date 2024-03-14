@@ -7,9 +7,9 @@ export default function About() {
         <div>
             <Cursor/>
             <div className={`min-h-screen flex flex-col`}>
-                <Header />
-                <MainContent />
-                <footer className={`flex p-[50px] border`}>
+                <Header size={0.5}/>
+                <MainContent size={2}/>
+                <footer className={`border flex flex-[1]`}>
                     <p className={`textColorPrimary text-3xl`}>
                         Footer
                     </p>
