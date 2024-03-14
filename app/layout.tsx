@@ -20,7 +20,7 @@ export default function RootLayout({children}) {
             <title></title>
         </head>
 
-        <body className={`bg-gradient-to-r from-black to-gray-900`}>
+        <body className={`bg-gradient-to-r from-black to-gray-900 overflow-hidden`}>
             {children}
         </body>
         </html>

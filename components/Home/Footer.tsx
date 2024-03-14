@@ -7,7 +7,7 @@ export const Footer = () => {
         window.scrollTo({top: window.innerHeight, behavior: "smooth"});
     }
     return (
-        <footer className={`p-3 flex text-[whitesmoke] w-full`}>
+        <footer className={`p-3 flex text-[whitesmoke] border w-full`}>
             <motion.button
                 animate={{scale: [1, 1.3, 1]}}
                 transition={{repeat: Infinity, duration: 1}}

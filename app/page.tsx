@@ -10,11 +10,10 @@ const myFont = localFont({
 export default function MyApp() {
 
     return (
-        <div className={myFont.className}>
+        <div className={`${myFont.className}`}>
             <Cursor />
             <Home />
         </div>
-
     )
 }
 
