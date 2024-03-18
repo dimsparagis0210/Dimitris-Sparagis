@@ -1,39 +1,26 @@
 'use client';
 
-import {motion, useAnimation} from "framer-motion";
-import {useEffect} from "react";
+import {Circle} from "@/components/Layout/Circle";
+import { Shadow } from "../Layout/Shadow";
 
-export const MainContentSectionPrimary = (props: {side:string, mainContent:string}) => {
-    const textColor: string = 'text-[whitesmoke]';
-    const controls = useAnimation();
-
-    useEffect(() => {
-        controls.start("visible");
-    }, []);
-
+export const MainContentSectionPrimary = () => {
     return (
-        <motion.div
-            variants={{
-                hidden: {opacity: 0, x: 100},
-                visible: {opacity:1, x :0}
-            }}
-            initial="hidden"
-            animate={controls}
-            transition={{ duration: 0.5, delay: 0.5}}
-        >
-            <hr className={`mr-1 bg-blue-950`}/>
-            <section className={`flex flex-row flex-1 p-[20px]`}>
-                <div className={`flex flex-1`}>
-                    <p className={`${textColor}`}>
-                        {props.side}
-                    </p>
+        <main>
+            <div>
+                <div className={`flex flex-col ml-5`}>
+                    <Shadow/>
+                    <div>
+                        <h1 className={`textColorPrimary text-8xl`}>Dimitris</h1>
+                    </div>
+                    <div className={`flex w-[40%]`}>
+                        <p className={`textColorPrimary`}>It's all about creating exceptional digital experiences</p>
+                    </div>
                 </div>
-                <div className={`flex flex-[1.5]`}>
-                    <p className={`${textColor} text-6xl `}>
-                        {props.mainContent}
-                    </p>
+                <div className={`absolute left-[150px]`}>
+                    <Circle/>
                 </div>
-            </section>
-        </motion.div>
+            </div>
+
+        </main>
     );
 }
