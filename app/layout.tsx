@@ -14,15 +14,14 @@ const myFont = localFont({
 export default function RootLayout({children}) {
     return (
         <html lang="en">
-        <head>
-            <link rel="icon" href="/favicon.ico" sizes="any"/>
-            <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400&display=swap" rel="stylesheet"/>
-            <title></title>
-        </head>
-
-        <body className={`bg-black`}>
-            {children}
-        </body>
+            <head>
+                <link rel="icon" href="/app/favicon.ico" sizes="any"/>
+                <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400&display=swap" rel="stylesheet"/>
+                <title></title>
+            </head>
+            <body className={`bg-black`}>
+                {children}
+            </body>
         </html>
     );
 }
