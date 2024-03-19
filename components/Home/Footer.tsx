@@ -1,24 +1,19 @@
-import {motion} from "framer-motion";
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-
 export const Footer = () => {
-
-    const nextPageHandler = () => {
-        window.scrollTo({top: window.innerHeight, behavior: "smooth"});
-    }
     return (
-        <footer className={`p-3 flex text-[whitesmoke] border w-full`}>
-            <motion.button
-                animate={{scale: [1, 1.3, 1]}}
-                transition={{repeat: Infinity, duration: 1}}
-                onClick={nextPageHandler}
-            >
-                <ArrowDownwardIcon
-                    fontSize="large"
-                    className="icon rounded-[100%] w-[80px] h-[80px] [transition:all_0.5s]
-                                    hover:bg-white hover:text-black hover:[cursor:none]"
-                />
-            </motion.button>
+        <footer className={`absolute bottom-0 w-full flex`}>
+            <main className={`flex items-center gap-2`}>
+                <section className={`flex flex-col relative bottom-10 items-center gap-5`}>
+                    <p className={`textColorPrimary rotate-[-90deg]`}>Scroll</p>
+                    <div className={`bg-white h-[60px] w-[3px]`}/>
+                </section>
+                <button className={`bg-white relative text-lg font-bold px-10 py-5 rounded-2xl`}>
+                    CV
+                </button>
+            </main>
+            <section className={`absolute bottom-5 right-2 textColorPrimary`}>
+                <p>Based in Athens, Greece</p>
+            </section>
         </footer>
+
     );
 }
