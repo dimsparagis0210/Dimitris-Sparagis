@@ -2,7 +2,7 @@ import './Navigation.css';
 
 export const Navigation = () => {
     return (
-        <div className="navigation">
+        <div className="navigation pl-5">
             <button className={`menu-button visible sm:invisible`}>
                 <p className={`text-black py-2 px-5`}>Menu</p>
             </button>

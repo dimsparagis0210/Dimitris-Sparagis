@@ -5,8 +5,8 @@ export default function Header() {
 
     return (
         <header className={`flex justify-between w-full`}>
-            <Logo/>
             <Navigation/>
+            <Logo/>
         </header>
     );
 }

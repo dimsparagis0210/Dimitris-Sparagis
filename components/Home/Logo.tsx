@@ -1,12 +1,6 @@
-import {motion, useAnimation} from "framer-motion";
-import {useEffect} from "react";
 import Image from "next/image";
 
 export const Logo = () => {
-    const controls = useAnimation();
-    useEffect(() => {
-        controls.start("visible");
-    }, []);
 
     return (
         <div>
