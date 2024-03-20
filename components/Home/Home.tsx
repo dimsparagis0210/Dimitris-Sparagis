@@ -12,7 +12,6 @@ export const Home = () => {
             <div className={`min-h-screen`}>
                 <Header />
                 <MainContentSectionPrimary />
-
                 <Footer />
             </div>
         </>
