@@ -6,7 +6,7 @@ export const Footer = () => {
                     <p className={`textColorPrimary rotate-[-90deg]`}>Scroll</p>
                     <div className={`bg-white h-[60px] w-[3px]`}/>
                 </section>
-                <button className={`bg-white relative text-lg font-bold px-10 py-5 rounded-2xl`}>
+                <button className={`bg-white absolute right-10 bottom-20 text-3xl font-bold px-8 py-8 rounded-full`}>
                     CV
                 </button>
             </main>
