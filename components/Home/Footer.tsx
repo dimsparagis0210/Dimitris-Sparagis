@@ -1,6 +1,6 @@
 export const Footer = () => {
     return (
-        <footer className={`absolute bottom-0 w-full flex border sm:text-lg`}>
+        <footer className={`absolute bottom-0 w-full flex border 2xs:text-[15px] sm:text-lg`}>
             <main className={`flex items-center gap-2`}>
                 <section className={`flex flex-col relative bottom-10 items-center gap-5`}>
                     <p className={`textColorPrimary rotate-[-90deg]`}>Scroll</p>

@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+import defaultTheme from 'tailwindcss/defaultTheme';
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,6 +10,11 @@ const config: Config = {
     extend: {
 
     },
+    screens: {
+      'xs' : '375px',
+      '2xs' : '320px',
+      ...defaultTheme.screens,
+    }
   },
   plugins: [],
 };
