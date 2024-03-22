@@ -7,16 +7,24 @@ export const MainContentSectionPrimary = () => {
     return (
         <main>
             <div>
-                <div className={`flex flex-col ml-5 sm:ml-12 sm:mt-[20px] relative lg:ml-[100px] lg:text-3xl`}>
+                <div className={`flex flex-col ml-5 relative 
+                                sm:ml-12 sm:mt-[20px] 
+                                md:text-2xl
+                                `}
+                >
                     <Shadow/>
                     <div>
-                        <h1 className={`textColorPrimary text-8xl`}>Dimitris</h1>
+                        <h1 className={`textColorPrimary text-8xl md:text-9xl`}>Dimitris</h1>
                     </div>
                     <div className={`flex w-[40%] sm:w-[30%]`}>
                         <p className={`textColorPrimary`}>It's all about creating exceptional digital experiences</p>
                     </div>
                 </div>
-                <div className={`absolute left-[150px] sm:left-[270px] sm:bottom-[180px]`}>
+                <div className={`absolute left-[150px] 
+                                sm:left-[270px] sm:bottom-[180px]
+                                md:left-[300px] md:bottom-[100px]
+                                `}
+                >
                     <Circle/>
                 </div>
             </div>

@@ -7,7 +7,11 @@ export const Navigation = () => {
                 <div className={`w-[30px] h-[2px] bg-black`}/>
                 <div className={`w-[30px] h-[2px] bg-black`}/>
             </button>
-            <ul className={`list invisible sm:visible left-10 relative top-[-20px]`}>
+            <ul className={`list invisible left-10 relative top-[-20px]
+                            sm:visible
+                            md:text-lg 
+                           `}
+            >
                 <li>Home</li>
                 <li>About</li>
                 <li>Skills</li>
