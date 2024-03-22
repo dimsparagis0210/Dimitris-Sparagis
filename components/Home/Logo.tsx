@@ -5,8 +5,9 @@ export const Logo = () => {
     return (
         <div>
             <Image
-                width="100"
-                height="100"
+                layout={"responsive"}
+                width="200"
+                height="200"
                 src="/4.png"
                 alt="Logo"
             />
