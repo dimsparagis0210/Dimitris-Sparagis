@@ -4,7 +4,9 @@ export const Shadow = () => {
     return (
         <>
             <div
-                className={`absolute blur-3xl rotate-[-15deg] bg-gray-500 w-[300px] h-[100px]`}
+                className={`absolute blur-3xl rotate-[-15deg] bg-gray-500 w-[300px] h-[100px]
+                           2xs:w-[200px] 
+                           `}
             />
         </>
     );
