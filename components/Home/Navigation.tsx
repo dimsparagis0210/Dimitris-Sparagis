@@ -10,6 +10,7 @@ export const Navigation = () => {
             <ul className={`list invisible left-10 relative top-[-20px]
                             sm:visible
                             md:text-lg 
+                            3xl:text-3xl 3xl:leading-10
                            `}
             >
                 <li>Home</li>
