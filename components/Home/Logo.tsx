@@ -3,7 +3,7 @@ import Image from "next/image";
 export const Logo = () => {
 
     return (
-        <div>
+        <div className={`right-0`}>
             <Image
                 layout={"responsive"}
                 width="200"

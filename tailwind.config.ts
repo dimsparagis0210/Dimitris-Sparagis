@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import defaultTheme from 'tailwindcss/defaultTheme';
+import colors from "tailwindcss/colors";
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,9 +12,15 @@ const config: Config = {
 
     },
     screens: {
-      'xs' : '375px',
-      '2xs' : '320px',
+      'xs': '420px',
+      '2xs' : '375px',
+      '3xs' : '320px',
+      '3xl' : '2560px',
       ...defaultTheme.screens,
+    },
+    colors: {
+      'beige': '#A8A38C',
+          ...colors
     }
   },
   plugins: [],
