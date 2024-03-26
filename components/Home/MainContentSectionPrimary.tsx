@@ -29,8 +29,8 @@ export const MainContentSectionPrimary = () => {
                     <div className={`flex w-[40%] 
                                     3xs:w-[50%]
                                     sm:w-[30%]
-                                    xl:w-[20%]
-                                    2xl:w-[30%]
+                                    xl:w-[30%] xl:text-4xl
+                                    2xl:w-[30%] 2xl:text-6xl
                                     `}
                     >
                         <p className={`textColorPrimary`}>It's all about creating exceptional digital experiences</p>
