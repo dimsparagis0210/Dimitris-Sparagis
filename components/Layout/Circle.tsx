@@ -7,7 +7,9 @@ export const Circle = () => {
                             sm:w-[300px] 
                             md:w-[350px]
                             lg:w-[400px]
-                            2xl:w-[600px]
+                            xl:w-[400px]
+                            2xl:w-[500px]
+                            3xl:w-[600px]
             `}/>
         </div>
     );
