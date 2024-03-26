@@ -20,6 +20,7 @@ const config: Config = {
     },
     colors: {
       'beige': '#A8A38C',
+      'myBlack':'#3E3D38',
           ...colors
     }
   },
