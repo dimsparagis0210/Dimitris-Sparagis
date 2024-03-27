@@ -36,8 +36,8 @@ export const MainContentSectionPrimary = () => {
                         <p className={`textColorPrimary`}>It's all about creating exceptional digital experiences</p>
                     </div>
                 </div>
-                <div className={`absolute left-[150px] 
-                                3xs:left-[100px]
+                <div className={`relative left-[150px] 
+                                3xs:left-[100px] 3xs:top-[100px]
                                 xs:left-[150px] bottom-[200px]
                                 sm:left-[280px] sm:bottom-[180px]
                                 md:left-[300px] md:bottom-[100px]
