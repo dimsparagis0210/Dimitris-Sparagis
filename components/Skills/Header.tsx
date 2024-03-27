@@ -13,7 +13,6 @@ export const Header = () => {
             <button>
                 <Image
                     layout={"responsive"}
-                    className={`relative top-0 right-0`}
                     src="/blackLogo.png"
                     alt="Logo"
                     width={100}

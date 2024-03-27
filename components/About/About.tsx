@@ -7,7 +7,7 @@ import { MultipleCirclesElement } from "../Layout/MultipleCirclesElement";
 export default function About() {
     return (
         <div>
-            <div className={`min-h-screen relative`}>
+            <div className={`min-h-screen relative rounded-3xl`}>
                 <Header />
                 <MainContent />
                 <MultipleCirclesElement />
