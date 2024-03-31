@@ -29,23 +29,24 @@ export const MainContent = () => {
                 />
                 <Skill
                     id={3}
-                    skills={["UI/UX", "Figma", "GSAP"]}
+                    skills={["UI/UX", "Figma"]}
                     isDashed={true}
                     title={"Design Stack"}
                     key={3}
                 />
-                <div className={`relative
-                                3xs:left-[10rem] 3xs:bottom-5
-                                xs:bottom-5                            
-                                sm:left-[15rem]
-                                md:left-[20rem]
-                                xl:left-[35rem]
-                                2xl:left-[55rem]
-                                3xl:left-[65rem] 3xl:bottom-[10rem]
-                                `}>
-                    <Circle />
-                </div>
             </main>
+            <div className={`absolute
+                             3xs:left-[7rem]
+                             xs:left-[10rem]
+                             sm:left-[20rem]
+                             lg:left-[30rem]
+                             xl:left-[40rem]
+                             2xl:left-[60rem] 2xl:bottom-[1rem]
+                             3xl:left-[100rem] 3xl:bottom-[20rem]
+                            `}
+            >
+                <Circle />
+            </div>
 
         </div>
     );

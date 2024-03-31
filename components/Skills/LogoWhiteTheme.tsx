@@ -1,6 +1,4 @@
-import Magnetic from '../Layout/Magnetic';
-
-export const Logo = () => {
+export const LogoWhiteTheme = () => {
     return (
         <div className={`right-0 aspect-square
                          3xs:w-[30%] 
@@ -8,12 +6,10 @@ export const Logo = () => {
                          xl:w-[10%]
                         `}
         >
-            <Magnetic>
-                <img
-                    src="/4.png"
-                    alt="Logo"
-                />
-            </Magnetic>
+            <img
+                src="/blackLogo.png"
+                alt="Logo"
+            />
         </div>
     );
 }

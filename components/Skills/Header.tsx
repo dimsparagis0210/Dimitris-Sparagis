@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { LogoWhiteTheme } from "./LogoWhiteTheme";
 
 export const Header = () => {
     return (
@@ -10,15 +10,7 @@ export const Header = () => {
                     <div className={`w-[30px] h-[2px] bg-white`}/>
                 </button>
             </div>
-            <button>
-                <Image
-                    layout={"responsive"}
-                    src="/blackLogo.png"
-                    alt="Logo"
-                    width={100}
-                    height={100}
-                />
-            </button>
+            <LogoWhiteTheme />
         </div>
     );
 }
