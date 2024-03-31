@@ -2,8 +2,8 @@ export const Skill = (props:{isDashed:boolean , title:string, skills:string[], i
 
     const skills:string = props.skills.join(", ");
     const isDashed = props.isDashed ?
-        "border border-[2px] border-beige border-dashed" :
-        "sm:ml-[100px] md:ml-[200px] 2xl:ml-[400px] 2xl:w-[100%]"
+        "border border-[2px] border-beige border-dashed z-[1]" :
+        "sm:ml-[100px] md:ml-[200px] 2xl:ml-[400px] 2xl:w-[100%] z-[1]"
     ;
 
     return (
