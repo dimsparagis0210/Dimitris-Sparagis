@@ -1,4 +1,25 @@
+import {useRef} from "react";
+import {gsap} from "gsap";
+import {Simulate} from "react-dom/test-utils";
+import mouseLeave = Simulate.mouseLeave;
+
 export const Circle = () => {
+    const circleRef = useRef(null);
+    const mouseEnterHandler = () => {
+        gsap.to(circleRef.current, {
+            scale: 1.1,
+            ease: "power2.inOut",
+            cursor: "pointer",
+        })
+    };
+    const mouseLeaveHandler = () => {
+        gsap.to(circleRef.current, {
+            scale: 1,
+            ease: "power2.inOut",
+            cursor: "pointer",
+        })
+    };
+
     return (
         <div>
             <div className={`w-[250px] aspect-square bg-gradient-to-b from-zinc-700 to-black rounded-full z-[-1] styles
@@ -10,7 +31,11 @@ export const Circle = () => {
                             xl:w-[500px]
                             2xl:w-[500px]
                             3xl:w-[600px]
-            `}/>
+            `}
+                 ref={circleRef}
+                 onMouseEnter={mouseEnterHandler}
+                 onMouseLeave={mouseLeaveHandler}
+            />
         </div>
     );
 }
