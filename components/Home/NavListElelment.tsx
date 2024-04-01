@@ -50,7 +50,7 @@ export const NavListElement = (props:{ text:string, index:number }) => {
         <li className={`p-1 hover:cursor-pointer`}>
             <a>
                 <span
-                    className={'flex flex-col overflow-y-hidden'}
+                    className={'flex flex-col p-1 hover:cursor-pointer overflow-y-hidden'}
                     onMouseEnter={listElementHoverHandler}
                     onMouseLeave={listElementHoverOutHandler}
                 >
