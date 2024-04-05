@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <header className={`flex justify-between mt-0 w-full`}>
             <Navigation/>
-            <Logo/>
+            <Logo />
         </header>
     );
 }

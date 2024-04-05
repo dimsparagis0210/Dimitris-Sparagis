@@ -11,6 +11,7 @@ import { Inter } from 'next/font/google';
 import {useGSAP} from "@gsap/react";
 import {useTextAnimation} from "@/hooks/animations/useTextAnimation";
 import SplitType from "split-type";
+import { Connect } from "@/components/Connect/Connect";
 
 const myFont = localFont({
     src: './fonts/CabinetGrotesk-Regular.woff2',
@@ -77,6 +78,7 @@ export default function MyApp() {
                     <About/>
                     <Skills/>
                     <Education/>
+                    <Connect />
                 </div>
             {/*}*/}
         </ReactLenis>
