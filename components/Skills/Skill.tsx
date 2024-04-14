@@ -9,7 +9,7 @@ export const Skill = (props:{isDashed:boolean , title:string, skills:string[], i
     return (
             <section
                 className={`${isDashed} rounded-3xl
-                    inline-flex items-center gap-[40px] py-5 px-2
+                    flex flex-row items-center gap-[40px] py-5 px-2
                     3xs:py-2 3xs:px-3 3xs:gap-1
                     xs:ml-[1rem]
                     2xl:w-[70%]

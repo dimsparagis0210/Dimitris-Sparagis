@@ -5,10 +5,7 @@ export const MainContent = () => {
     return (
         <div className={`xs:ml-[1rem] sm:ml-[2rem] xl:ml-[5rem] 2xl:ml-[7rem]`}>
             <header>
-                <h1 className={`3xs:text-[3rem] sm:text-[4rem] lg:text-[6rem] xl:text-[8rem]
-                                2xl:text-[9rem] 2xl:ml-[5rem]
-                                `}
-                >
+                <h1>
                     Skills
                 </h1>
             </header>

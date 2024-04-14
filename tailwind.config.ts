@@ -21,6 +21,7 @@ const config: Config = {
     colors: {
       'beige': '#A8A38C',
       'myBlack':'#3E3D38',
+      'myBrown':'#5F4F4F',
           ...colors
     }
   },
