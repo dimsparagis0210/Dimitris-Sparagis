@@ -3,7 +3,7 @@
 import {useEffect, useRef} from "react";
 import gsap from "gsap";
 
-export const useTextHoverAnimation = () => {
+export const useArrowHoverAnimation = () => {
     const ref1 = useRef(null);
     const ref2 = useRef(null);
     const buttonRef = useRef(null);
@@ -23,7 +23,7 @@ export const useTextHoverAnimation = () => {
         };
 
         const handleMouseLeave = () => {
-            gsap.to([ref1.current], {
+            gsap.to([ref1.current, ref2.current], {
                 duration: 0.3,
                 translateY: 0,
                 ease: 'cubic.inOut',
