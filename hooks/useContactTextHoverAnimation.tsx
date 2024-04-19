@@ -20,6 +20,12 @@ export const useContactTextHoverAnimation = () => {
                 translateX: 0,
                 ease: 'cubic.inOut',
             });
+            gsap.to([contactButtonRef.current], {
+                duration: 0.3,
+                backgroundColor: '#000000',
+                color: '#F2F2F2',
+                ease: 'cubic.inOut',
+            });
         };
 
         const handleMouseLeave1 = () => {
@@ -31,6 +37,12 @@ export const useContactTextHoverAnimation = () => {
             gsap.to([contactRef2.current], {
                 duration: 0.3,
                 translateX: -65,
+                ease: 'cubic.inOut',
+            });
+            gsap.to([contactButtonRef.current], {
+                duration: 0.3,
+                backgroundColor: '#F2F2F2',
+                color: '#000000',
                 ease: 'cubic.inOut',
             });
         };

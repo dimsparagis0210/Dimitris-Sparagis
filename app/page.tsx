@@ -33,8 +33,8 @@ export default function MyApp() {
                     <NavListElement content={'About'}/>
                     <NavListElement content={'Education'}/>
                     <NavListElement content={'Services'}/>
-                    <li className={`bg-myWhite rounded-full text-black p-3`}>
-                        <button className={`flex rotate-0 overflow-hidden border-white`} ref={contactButtonRef}>
+                    <li className={`bg-myWhite rounded-full text-black p-3`} ref={contactButtonRef}>
+                        <button className={`flex rotate-0 overflow-hidden border-white`}>
                             <p
                                 ref={contactRef1}
                             >
