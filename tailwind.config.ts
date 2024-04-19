@@ -11,6 +11,12 @@ const config: Config = {
     extend: {
 
     },
+    fontFamily: {
+      'sans':[
+          'Helvetica',
+          'sans-serif'
+      ],
+    },
     screens: {
       'xs': '420px',
       '2xs' : '375px',
@@ -19,8 +25,8 @@ const config: Config = {
       ...defaultTheme.screens,
     },
     colors: {
-      'beige': '#A8A38C',
-      'myBlack':'#3E3D38',
+      'myBlack':'000000',
+      'myWhite':'#F2F2F2',
       'myBrown':'#5F4F4F',
           ...colors
     }

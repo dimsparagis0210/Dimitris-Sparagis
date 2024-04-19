@@ -1,14 +1,10 @@
 import type {Metadata} from "next";
 import './globals.css';
-import localFont from "next/font/local";
 
 export const metadata: Metadata = {
     title: "Dimitris Sparagis",
     description: "It's all about creating exceptional digital experiences",
 };
-const myFont = localFont({
-    src: './fonts/CabinetGrotesk-Regular.woff2',
-});
 // @ts-ignore
 export default function RootLayout({children}) {
     return (

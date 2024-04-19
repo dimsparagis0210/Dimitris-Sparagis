@@ -1,87 +1,60 @@
-'use client';
-import {Home} from "@/components/Home/Home";
-import localFont from "next/font/local";
-import About from "@/components/About/About";
-import {Skills} from "@/components/Skills/Skills";
-import {ReactLenis} from "@studio-freight/react-lenis";
-import {Education} from "@/components/Education/Education";
-import {useRef, useState} from "react";
-import {gsap} from "gsap";
-import { Inter } from 'next/font/google';
-import {useGSAP} from "@gsap/react";
-import {useTextAnimation} from "@/hooks/animations/useTextAnimation";
-import SplitType from "split-type";
-import { Connect } from "@/components/Connect/Connect";
-
-const myFont = localFont({
-    src: './fonts/CabinetGrotesk-Regular.woff2',
-});
-
-const inter = Inter({
-    subsets: ['latin'],
-});
+import { Scroll } from '@/components/Layout/Scroll';
+import './globals.css';
+import {Circle} from "@/components/Layout/Circle";
+import {ArrowUpward} from "@mui/icons-material";
 
 export default function MyApp() {
-    // const nameRef = useRef(null);
-    // const yearRef = useRef(null);
-    // const containerRef = useRef(null);
-    // const [isRendered, setIsRendered] = useState(false);
-    //
-    //
-    // useGSAP(() => {
-    //     const timeline = gsap.timeline({onComplete: () => setIsRendered(true)});
-    //     timeline.to([nameRef.current, yearRef.current], {
-    //         opacity: 1,
-    //         y: 0,
-    //         duration: 1,
-    //         ease: "power4.inOut",
-    //         stagger:0.1,
-    //     });
-    //     timeline.to([nameRef.current, yearRef.current, containerRef.current], {
-    //         translateY: '-100%',
-    //         duration: 1,
-    //         borderRadius:'100px',
-    //         ease: "power2.inOut",
-    //         stagger:0.1,
-    //     });
-    //
-    // }, []);
-
     return (
-        <ReactLenis root>
-            {/*{!isRendered ?*/}
-            {/*    <div className={`${myFont.className} min-h-screen w-[100%] relative z-[1]`}>*/}
-            {/*        <div className={`bg-white flex items-center justify-center min-h-screen `} ref={containerRef}>*/}
-            {/*            <div className={`flex flex-col`}>*/}
-            {/*                <h1*/}
-            {/*                    ref={nameRef}*/}
-            {/*                    className={`text-center opacity-0 translate-y-10 text-beige*/}
-            {/*                                3xs:text-4xl name*/}
-            {/*                    `}*/}
-            {/*                >*/}
-            {/*                    Dimitris Sparagis*/}
-            {/*                </h1>*/}
-            {/*                <h1*/}
-            {/*                    ref={yearRef}*/}
-            {/*                    className={`text-center opacity-0 translate-y-10 text-black*/}
-            {/*                                3xs:text-4xl*/}
-            {/*                    `}*/}
-            {/*                >*/}
-            {/*                    ©️2024*/}
-            {/*                </h1>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*    :*/}
-                <div className={`${myFont.className} overflow-x-hidden overflow-y-hidden`}>
-                    <Home/>
-                    <About/>
-                    <Skills/>
-                    <Education/>
-                    <Connect />
+        <div className={`bg-myWhite h-screen flex flex-col gap-[10rem]`}>
+            <header className={`flex`}>
+                <div className={`aspect-square w-[100px] absolute`}>
+                    <img src="/blackLogo.png" alt=""/>
                 </div>
-            {/*}*/}
-        </ReactLenis>
-    )
+                <ul className={`bg-black text-myWhite flex items-center mx-auto
+                                px-10 py-5 gap-5 rounded-xl my-1`
+                }>
+                    <li className={``}>
+                        <a href="">Home</a>
+                    </li>
+                    <li className={``}>
+                        <a href="#">About</a>
+                    </li>
+                    <li className={``}>
+                        <a href="#">Education</a>
+                    </li>
+                    <li className={``}>
+                        <a href="#">Services</a>
+                    </li>
+                    <li className={`bg-myWhite rounded-lg text-black p-3`}>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </header>
+            <main className={`flex font-bold justify-center`}>
+                <section className={`flex flex-col text-center z-[2] py-[8rem] text-9xl`}>
+                    <p>DIMITRIS</p>
+                    <p>SPARAGIS</p>
+                </section>
+                <div className={`absolute z-[1]`}>
+                    <Circle/>
+                </div>
+            </main>
+            <section className={`flex justify-center items-center gap-2 text-xl`}>
+                <div className={`rounded-full bg-white aspect-square w-[5rem] 
+                    flex justify-center items-center rotate-45`}>
+                    <ArrowUpward
+                        fontSize={`large`}
+                    />
+                </div>
+                <p>Download or view CV</p>
+            </section>
+            <footer>
+                <Scroll/>
+                <span className={'absolute bottom-2 right-5'}>
+                    <p>Based in Athens, Greece</p>
+                </span>
+            </footer>
+        </div>
+    );
 }
 

@@ -19,23 +19,28 @@
     color: var(--text-colorPrimary);
 }
 
-h1 {
-    @apply 3xs:text-[3rem] sm:text-[4rem] lg:text-[6rem] xl:text-[8rem]
-    2xl:text-[9rem] 2xl:ml-[5rem]
-}
+/*@font-face {*/
+/*    font-family: 'Helvetica', sans-serif;*/
+/*    src: url('fonts/Helvetica.ttf') format('truetype');*/
+/*}*/
+
+/*h1 {*/
+/*    @apply 3xs:text-[3rem] sm:text-[4rem] lg:text-[6rem] xl:text-[8rem]*/
+/*    2xl:text-[9rem] 2xl:ml-[5rem]*/
+/*}*/
 
 
-h3{
-    @apply 3xs:text-lg sm:text-xl lg:text-2xl
-    xl:text-4xl 2xl:text-4xl
-}
+/*h3{*/
+/*    @apply 3xs:text-lg sm:text-xl lg:text-2xl*/
+/*    xl:text-4xl 2xl:text-4xl*/
+/*}*/
 
-h2{
-    @apply 3xs:text-xl sm:text-3xl lg:text-4xl
-    xl:text-6xl 2xl:text-6xl font-bold
-}
+/*h2{*/
+/*    @apply 3xs:text-xl sm:text-3xl lg:text-4xl*/
+/*    xl:text-6xl 2xl:text-6xl font-bold*/
+/*}*/
 
-li{
-    @apply  text-white 3xs:py-2 lg:py-5 3xs:text-lg sm:text-xl lg:text-2xl
-    xl:text-4xl 2xl:text-4xl
-}
+/*li{*/
+/*    @apply  text-white 3xs:py-2 lg:py-5 3xs:text-lg sm:text-xl lg:text-2xl*/
+/*    xl:text-4xl 2xl:text-4xl*/
+/*}*/
