@@ -55,12 +55,12 @@ export const Scroll = () => {
         });
     })
     return (
-        <div className={`absolute bottom-0 w-full flex 3xs:text-sm sm:text-lg 3xl:text-3xl`}>
+        <div className={`absolute bottom-0 w-full flex text-lg lg:text-2xl`}>
             <main className={`flex items-center gap-2`}>
                 <section className={`flex flex-col relative bottom-10 items-center gap-5 2xl:gap-7`}>
                     <p className={`text-black rotate-[-90deg]`} ref={scrollTextRef}>Scroll</p>
                     <div className={`overflow-y-hidden`}>
-                        <div className={`bg-black h-[60px] w-[3px] 2xl:h-[100px]`} ref={scrollLineRef}/>
+                        <div className={`bg-black h-[80px] lg:h-[100px] w-[3px]`} ref={scrollLineRef}/>
                     </div>
                 </section>
             </main>

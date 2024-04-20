@@ -21,7 +21,7 @@ export const Circle = () => {
     };
     return (
         <div>
-            <div className={`w-[250px] aspect-square bg-gradient-to-b from-[#D6D6D6] to-myWhite rounded-full z-[-1] styles
+            <div className={`w-[180px] aspect-square bg-gradient-to-b from-[#D6D6D6] to-myWhite rounded-full z-[-1] styles
                             3xs:w-[200px]
                             2xs:w-[250px]
                             sm:w-[300px] 
