@@ -1,0 +1,15 @@
+.main{
+  .mask, .body{
+    color: black;
+    cursor: default;
+  }
+
+  .mask{
+    mask-image: url('../public/mask.svg');
+    mask-repeat: no-repeat;
+    mask-size: 40px;
+    position: absolute;
+    background: #ec4e39;
+    color: #D9D9D9;
+  }
+}

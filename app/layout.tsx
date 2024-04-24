@@ -11,7 +11,6 @@ export default function RootLayout({children}) {
         <html lang="en">
             <head>
                 <link rel="icon" href="/app/favicon.ico" sizes="any"/>
-                <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400&display=swap" rel="stylesheet"/>
                 <title></title>
             </head>
             <body className={`bg-black`}>

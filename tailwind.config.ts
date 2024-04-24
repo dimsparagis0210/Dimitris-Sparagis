@@ -28,6 +28,7 @@ const config: Config = {
       'myBlack':'000000',
       'myWhite':'#F2F2F2',
       'myBrown':'#5F4F4F',
+      'myGray':'#D9D9D9',
           ...colors
     }
   },
