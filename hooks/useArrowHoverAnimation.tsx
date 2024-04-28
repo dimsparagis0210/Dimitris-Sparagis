@@ -23,7 +23,7 @@ export const useArrowHoverAnimation = () => {
         };
 
         const handleMouseLeave = () => {
-            gsap.to([ref1.current, ref2.current], {
+            gsap.to([ref1.current], {
                 duration: 0.3,
                 translateY: 0,
                 ease: 'cubic.inOut',

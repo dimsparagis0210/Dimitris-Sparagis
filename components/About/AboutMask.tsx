@@ -1,34 +1,35 @@
-import {motion, useInView} from "framer-motion";
+import {motion} from "framer-motion";
 import styles from '../../app/page.module.scss';
 import gsap from "gsap";
 import useMousePosition from "../../hooks/useMousePosition";
 import {useEffect, useRef, useState} from "react";
-import {ReactRef} from "@gsap/react";
 
-export const About = () => {
+export const AboutMask= (props:{handleSize:any}) => {
     const [isHovered, setIsHovered] = useState(false);
     const [isHovered2, setIsHovered2] = useState(false);
-    const viewRef = useRef(null);
-    const inView = useInView(viewRef);
+    const [isActive, setIsActive] = useState(true);
+    const {x, y} = useMousePosition();
+    let size;
+
+    props.handleSize(40);
 
 
     const ballsRef = useRef(null);
     return (
-        <motion.div
-            className={`pageContainer md:min-h-screen relative bg-myWhite`}
-            id={'about'}
-        >
-            <main className={`flex flex-col gap-10 text-xl md:text-3xl lg:text-5xl xl:text-7xl `}>
+        <div className={`pageContainer md:min-h-screen bg-myWhite`}>
+            <main className={`flex flex-col gap-10 text-xl md:text-3xl lg:text-5xl xl:text-7xl`}>
                 <section className={`flex p-10 justify-around`}>
-                    <p className={`text-myGray`} onMouseEnter={() => setIsHovered2(true)}
-                       onMouseLeave={() => setIsHovered2(false)}>
+                    <p className={`text-myGray`} onMouseEnter={props.handleSize(200)}
+                       onMouseLeave={() => {
+                           props.handleSize(40);
+                       }}>
                         .01
                     </p>
                     <div className={'flex flex-col gap-10 w-[50%]'}>
                         <section>
-                            <p onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                                I'm Dimitris, a passionate 20-year-old software engineer and designer hailing
-                                from the beautiful landscapes of Greece.
+                            <p onMouseEnter={props.handleSize(400)} onMouseLeave={props.handleSize(40)}>
+                                I'm Dim13s, a software engineer and designer that AI can't touch.
+                                My creativity and problem-solving skills keep me ahead of the curve.
                             </p>
                         </section>
                         <div className={`overflow-hidden shadow-2xl rounded-2xl self-end`}
@@ -57,6 +58,6 @@ export const About = () => {
                     </div>
                 </section>
             </main>
-        </motion.div>
+        </div>
     );
 }

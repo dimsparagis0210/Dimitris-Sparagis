@@ -13,7 +13,7 @@ export default function RootLayout({children}) {
                 <link rel="icon" href="/app/favicon.ico" sizes="any"/>
                 <title></title>
             </head>
-            <body className={`bg-black`}>
+            <body>
                 {children}
             </body>
         </html>

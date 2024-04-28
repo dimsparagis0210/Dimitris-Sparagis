@@ -1,17 +1,30 @@
-'use client'
+'use client';
 
 import {Home} from "@/components/Home/Home";
-import {About} from "@/components/About/About";
 import ReactLenis from "@studio-freight/react-lenis";
-import styles from "@/app/page.module.scss";
+import {About} from "@/components/About/About";
+import {Nav} from "@/components/Layout/Nav";
+import {useRef, useState} from "react";
+import {useScroll} from "framer-motion";
 
 export default function MyApp() {
 
+    const [isNavActive, setIsNavActive] = useState(false);
+    const navScrollRef = useRef(null);
+
+
+    const setIsActive = (isActive: boolean) => {
+        setIsNavActive(isActive);
+    }
+
+    const {scrollYProgress} = useScroll();
     return (
         <>
             <ReactLenis root>
-                <Home/>
+                <Nav isActive={setIsActive} ref={navScrollRef}/>
+                <Home scrollY={scrollYProgress}/>
                 <About/>
+                {/*<Education/>*/}
             </ReactLenis>
         </>
     )
