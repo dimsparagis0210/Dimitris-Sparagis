@@ -128,7 +128,7 @@ export const Home = (props:{scrollY:MotionValue<number>}) => {
             <section className={`flex justify-center items-center gap-2 text-xl`}>
                 <AnimatePresence mode={'wait'}>
 
-                    <a className={`rounded-full bg-white aspect-square w-[5rem]
+                    <button className={`rounded-full bg-white aspect-square w-[5rem] h-[5rem]
                  flex justify-center items-center`}
                        ref={buttonRef}
                        onMouseEnter={() => {
@@ -151,7 +151,7 @@ export const Home = (props:{scrollY:MotionValue<number>}) => {
                        }}
                        onClick={cvHandler}
                     >
-                        <div className={`rotate-45 flex overflow-hidden`}>
+                        <div className={`rotate-45 flex overflow-hidden relative`}>
                             <ArrowUpward
                                 fontSize={`large`}
                                 ref={ref1}
@@ -162,15 +162,12 @@ export const Home = (props:{scrollY:MotionValue<number>}) => {
                                 className={`absolute translate-y-8`}
                             />
                         </div>
-                    </a>
+                    </button>
                 </AnimatePresence>
                 <p className={`md:text-2xl`}>Download or view CV</p>
             </section>
-            <footer>
+            <footer className={`absolute bottom-2`}>
                 <Scroll/>
-                <span className={`absolute bottom-2 right-5 text-lg lg:text-2xl`}>
-                    <p>Based in Athens, Greece</p>
-                </span>
             </footer>
         </div>
     );

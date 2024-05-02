@@ -24,7 +24,7 @@ export default function MyApp() {
                 <Nav isActive={setIsActive} ref={navScrollRef}/>
                 <Home scrollY={scrollYProgress}/>
                 <About/>
-                {/*<Education/>*/}
+                <h1></h1>
             </ReactLenis>
         </>
     )
