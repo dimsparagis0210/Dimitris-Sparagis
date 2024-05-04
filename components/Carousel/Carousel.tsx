@@ -2,6 +2,7 @@ import './Carousel.css';
 import {Plaster} from "next/font/google";
 import {motion, useAnimationFrame, useMotionValue, useScroll, useSpring, useTransform, useVelocity, wrap} from "framer-motion";
 import {useRef} from "react";
+import gsap from "gsap";
 
 const plaster = Plaster({
     subsets: ["latin"],
@@ -10,6 +11,45 @@ const plaster = Plaster({
     display: "swap",
     fallback: ["sans-serif"],
 });
+
+const text = [
+    {
+        title: "Software Engineer",
+    },
+    {
+        title:"•"
+    },
+    {
+        title: "Designer",
+    },
+    {
+        title:"•"
+    },
+    {
+        title: "Student",
+    },
+    {
+        title:"•"
+    },
+    {
+        title: "Software Engineer",
+    },
+    {
+        title:"•"
+    },
+    {
+        title: "Designer",
+    },
+    {
+        title:"•"
+    },
+    {
+        title: "Student",
+    },
+    {
+        title:"•"
+    },
+]
 
 export const Carousel = () => {
     const baseX = useMotionValue(0);
@@ -37,41 +77,45 @@ export const Carousel = () => {
 
         baseX.set(baseX.get() + moveBy);
     });
+    const textRef = useRef(null);
     return (
-        <div className={`overflow-hidden font ${plaster.className} mx-[8rem] mt-[3rem] mb-[8rem] border-y border-y-black py-[5rem]`}>
+        <div className={`overflow-hidden font ${plaster.className} 
+                        mx-[1rem] mt-[3rem] mb-[8rem] border-y border-y-black py-[2rem]
+                        sm:text-3xl sm:mx-[2rem] sm:py-[3rem]
+                        md:mt-[0rem]
+                        lg:text-5xl lg:mx-[5rem] lg:py-[4rem] lg:mt-[3rem]
+                        xl:text-7xl xl:mx-[8rem] xl:py-[5rem]
+                        `}
+        >
             <motion.div
                 style={{x}}
-                className={`flex gap-5 text-7xl whitespace-nowrap`}
+                className={`flex gap-5 whitespace-nowrap`}
+                ref={textRef}
             >
-                <h1>Software Engineer</h1>
-                <h1>•</h1>
-                <h1>Designer</h1>
-                <h1>•</h1>
-                <h1>Student</h1>
-                <h1>•</h1>
-                <h1>Software Engineer</h1>
-                <h1>•</h1>
-                <h1>Designer</h1>
-                <h1>•</h1>
-                <h1>Student</h1>
-                <h1>•</h1>
-                <h1>Software Engineer</h1>
-                <h1>•</h1>
-                <h1>Designer</h1>
-                <h1>•</h1>
-                <h1>Student</h1>
-                <h1>•</h1>
-                <h1>Software Engineer</h1>
-                <h1>•</h1>
-                <h1>Designer</h1>
-                <h1>•</h1>
-                <h1>Student</h1>
-                <h1>•</h1>
-                <h1>Software Engineer</h1>
-                <h1>•</h1>
-                <h1>Designer</h1>
-                <h1>•</h1>
-                <h1>Student</h1>
+                {text.map((t, i) => (
+                    <motion.h1
+                                onMouseEnter={() => {
+                                    gsap.to(textRef.current, {
+                                        scale:1.1,
+                                        duration: 0.5,
+                                        color: "#F2F2F2",
+                                        webkitTextStrokeWidth: "2px",
+                                        webkitTextStrokeColor: "black",
+                                    })
+                                }}
+                                onMouseLeave={() => {
+                                    gsap.to(textRef.current, {
+                                        scale:1,
+                                        duration: 0.5,
+                                        color: "black",
+                                        webkitTextStrokeWidth: "0px",
+                                        webkitTextStrokeColor: "black",
+                                    })
+                                }}
+                    >
+                        {t.title}
+                    </motion.h1>
+                ))}
             </motion.div>
         </div>
     )

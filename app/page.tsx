@@ -27,7 +27,7 @@ export default function MyApp() {
                 <Home scrollY={scrollYProgress}/>
                 <About/>
                 <Carousel />
-                <Education />
+                {/*<Education />*/}
             </ReactLenis>
         </>
     )
