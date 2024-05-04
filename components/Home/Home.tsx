@@ -9,8 +9,9 @@ import {useContactTextHoverAnimation} from "@/hooks/useContactTextHoverAnimation
 import {useRef} from "react";
 import HoverAudio from "../Audio/HoverAudio";
 import {AnimatePresence, motion, MotionValue, useScroll, useSpring} from "framer-motion";
+import {Nav} from "../Layout/Nav";
 
-export const Home = (props:{scrollY:MotionValue<number>}) => {
+export const Home = (props: { scrollY: MotionValue<number> }) => {
     const {
         ref1,
         ref2,
@@ -36,13 +37,13 @@ export const Home = (props:{scrollY:MotionValue<number>}) => {
         timeline.to(ref2.current, {rotate: 45, duration: 0.5, ease: 'power4.inOut'}, '<');
         timeline.to(ref1.current, {rotate: 0, duration: 0.5, ease: 'power4.inOut'}, '>');
         timeline.to(ref2.current, {rotate: 0, duration: 0.5, ease: 'power4.inOut'}, '<');
-        timeline.to(ref2.current, {rotate: 45, x: 100, y:-100, duration: 0.5, ease: 'power4.inOut'}, '<');
+        timeline.to(ref2.current, {rotate: 45, x: 100, y: -100, duration: 0.5, ease: 'power4.inOut'}, '<');
 
         if (await timeline) {
             window.open('/resume.pdf', '_blank');
         }
-        timeline.to(ref2.current, {rotate:0 ,x: 0, y:-32, duration: 0.5, ease: 'power4.inOut'}, '<');
-        timeline.to(ref1.current, {rotate:0, x: 0, y:0, duration: 0.5, ease: 'power4.inOut'}, '<');
+        timeline.to(ref2.current, {rotate: 0, x: 0, y: -32, duration: 0.5, ease: 'power4.inOut'}, '<');
+        timeline.to(ref1.current, {rotate: 0, x: 0, y: 0, duration: 0.5, ease: 'power4.inOut'}, '<');
     }
 
     return (
@@ -104,15 +105,7 @@ export const Home = (props:{scrollY:MotionValue<number>}) => {
             </header>
             <main className={`flex font-bold justify-center`}>
                 <section
-                    className={`flex flex-col h-fit text-center z-[2] py-[8rem] text-4xl 3xs:text-5xl xs:text-7xl md:text-9xl hover:cursor-default`}
-                    onMouseEnter={() => {
-                        gsap.to(nameRef.current, {scale: 1.1, duration: 0.5, ease: 'power4.inOut'})
-                    }
-                    }
-                    onMouseLeave={() => {
-                        gsap.to(nameRef.current, {scale: 1, duration: 0.5, ease: 'power4.inOut'})
-                    }}
-                    ref={nameRef}
+                    className={`flex flex-col h-fit text-center z-[2] sm:py-[8rem] py-[10rem] text-4xl 3xs:text-5xl xs:text-7xl md:text-9xl hover:cursor-default`}
                 >
                     <p>DIMITRIS</p>
                     <p>SPARAGIS</p>
@@ -121,7 +114,7 @@ export const Home = (props:{scrollY:MotionValue<number>}) => {
                         style={{scaleX}}
                     />
                 </section>
-                <div className={`absolute z-[1]`}>
+                <div className={`absolute z-[1] py-[5rem] sm:py-[2rem] `}>
                     <Circle/>
                 </div>
             </main>
@@ -130,26 +123,26 @@ export const Home = (props:{scrollY:MotionValue<number>}) => {
 
                     <button className={`rounded-full bg-white aspect-square w-[5rem] h-[5rem]
                  flex justify-center items-center`}
-                       ref={buttonRef}
-                       onMouseEnter={() => {
-                           gsap.to(buttonRef.current, {
-                               backgroundColor: 'black',
-                               color: 'white',
-                               border: 'solid #D9D9D9 2px',
-                               duration: 0.5,
-                               ease: 'sine.inOut'
-                           })
-                       }}
-                       onMouseLeave={() => {
-                           gsap.to(buttonRef.current, {
-                               backgroundColor: 'white',
-                               color: 'black',
-                               border: 'none',
-                               duration: 0.5,
-                               ease: 'power4.inOut'
-                           })
-                       }}
-                       onClick={cvHandler}
+                            ref={buttonRef}
+                            onMouseEnter={() => {
+                                gsap.to(buttonRef.current, {
+                                    backgroundColor: 'black',
+                                    color: 'white',
+                                    border: 'solid #D9D9D9 2px',
+                                    duration: 0.5,
+                                    ease: 'sine.inOut'
+                                })
+                            }}
+                            onMouseLeave={() => {
+                                gsap.to(buttonRef.current, {
+                                    backgroundColor: 'white',
+                                    color: 'black',
+                                    border: 'none',
+                                    duration: 0.5,
+                                    ease: 'power4.inOut'
+                                })
+                            }}
+                            onClick={cvHandler}
                     >
                         <div className={`rotate-45 flex overflow-hidden relative`}>
                             <ArrowUpward

@@ -3,7 +3,6 @@ import {gsap} from "gsap";
 import {ArrowUpward} from "@mui/icons-material";
 import HoverAudio from "@/components/Audio/HoverAudio";
 import {useRef} from "react";
-import {stagger} from "framer-motion";
 // @ts-ignore
 import {perspective} from '../Layout/Animate';
 import {ScrollToPlugin} from "gsap/ScrollToPlugin";
@@ -12,6 +11,14 @@ export const NavLink = (props: { content: string, href: string, key: number }) =
     const titleRef = useRef(null);
     const arrowRef = useRef(null);
     const containerRef = useRef(null);
+
+    //Arrow size
+    let arrowSize = "large";
+    if (screen.width >= 768) {
+        arrowSize = "large";
+    } else {
+        arrowSize = "medium";
+    }
 
     return (
         <motion.a
@@ -48,7 +55,7 @@ export const NavLink = (props: { content: string, href: string, key: number }) =
             }
         >
                 <div ref={arrowRef} className={`translate-x-[-50px] rotate-90 absolute`}>
-                    <ArrowUpward fontSize={"large"}/>
+                    <ArrowUpward fontSize={arrowSize}/>
                 </div>
                 <HoverAudio>
                     <div ref={titleRef} className={`cursor-default`}>

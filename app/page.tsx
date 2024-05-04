@@ -21,7 +21,7 @@ export default function MyApp() {
     return (
         <>
             <ReactLenis root>
-                <Nav isActive={setIsActive} ref={navScrollRef}/>
+                <Nav />
                 <Home scrollY={scrollYProgress}/>
                 <About/>
                 <h1></h1>
