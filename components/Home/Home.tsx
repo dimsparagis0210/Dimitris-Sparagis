@@ -9,7 +9,6 @@ import {useContactTextHoverAnimation} from "@/hooks/useContactTextHoverAnimation
 import {useRef} from "react";
 import HoverAudio from "../Audio/HoverAudio";
 import {AnimatePresence, motion, MotionValue, useScroll, useSpring} from "framer-motion";
-import {Nav} from "../Layout/Nav";
 
 export const Home = (props: { scrollY: MotionValue<number> }) => {
     const {

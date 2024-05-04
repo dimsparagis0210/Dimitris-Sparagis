@@ -12,13 +12,7 @@ export const NavLink = (props: { content: string, href: string, key: number }) =
     const arrowRef = useRef(null);
     const containerRef = useRef(null);
 
-    //Arrow size
-    let arrowSize = "large";
-    if (screen.width >= 768) {
-        arrowSize = "large";
-    } else {
-        arrowSize = "medium";
-    }
+    const windowW:boolean =  window.innerWidth >= 768;
 
     return (
         <motion.a
@@ -55,7 +49,11 @@ export const NavLink = (props: { content: string, href: string, key: number }) =
             }
         >
                 <div ref={arrowRef} className={`translate-x-[-50px] rotate-90 absolute`}>
-                    <ArrowUpward fontSize={arrowSize}/>
+                    {windowW ?
+                        <ArrowUpward fontSize={"large"}/>
+                        :
+                        <ArrowUpward fontSize={"medium"}/>
+                    }
                 </div>
                 <HoverAudio>
                     <div ref={titleRef} className={`cursor-default`}>

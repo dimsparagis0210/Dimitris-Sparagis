@@ -6,6 +6,8 @@ import {About} from "@/components/About/About";
 import {Nav} from "@/components/Layout/Nav";
 import {useRef, useState} from "react";
 import {useScroll} from "framer-motion";
+import {Education} from "@/components/Education/Education";
+import { Carousel } from "@/components/Carousel/Carousel";
 
 export default function MyApp() {
 
@@ -24,7 +26,8 @@ export default function MyApp() {
                 <Nav />
                 <Home scrollY={scrollYProgress}/>
                 <About/>
-                <h1></h1>
+                <Carousel />
+                <Education />
             </ReactLenis>
         </>
     )

@@ -1,4 +1,4 @@
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {gsap} from "gsap";
 import styles from './Burger.module.scss';
 import {AnimatePresence, motion} from "framer-motion";
@@ -43,16 +43,34 @@ export const Nav = () => {
 
     let navW, navH;
 
-    if (window.innerWidth >= 1024) {
-        navW = '25%';
-        navH = '80%';
-    } else if (window.innerWidth < 1024 && window.innerWidth >= 640) {
-        navW = '40%';
-        navH = '80%';
-    } else if (window.innerWidth < 640) {
-        navW = '80%';
-        navH = 'auto';
+    if(typeof window !== 'undefined') {
+        if (global?.window.innerWidth >= 1024) {
+            navW = '25%';
+            navH = '80%';
+        } else if (global?.window.innerWidth < 1024 && global?.window.innerWidth >= 640) {
+            navW = '40%';
+            navH = '80%';
+        } else if (global?.window.innerWidth < 640) {
+            navW = '80%';
+            navH = 'auto';
+        }
     }
+
+
+
+    // useEffect(() => {
+    //     if (window.innerWidth >= 1024) {
+    //         navW = '25%';
+    //         navH = '80%';
+    //     } else if (global?.window.innerWidth < 1024 && window.innerWidth >= 640) {
+    //         navW = '40%';
+    //         navH = '80%';
+    //     } else if (window.innerWidth < 640) {
+    //         navW = '80%';
+    //         navH = 'auto';
+    //     }
+    // }, [])
+
 
     const variants = {
         open: {
